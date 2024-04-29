@@ -21,9 +21,36 @@ const Form = () => {
         }
     };
 
+    // function MyForm() {
+    //     const [ocrResult, setOcrResult] = useState('');
+    //     const [selectedFile, setSelectedFile] = useState(null);
+
+    //     const handleFileUpload = (event) => {
+    //         setSelectedFile(event.target.files[0]);
+    //     };
+
+    //     const handleSubmit = async (event) => {
+    //         event.preventDefault();
+
+    //         const formData = new FormData();
+    //         formData.append('ocrResult', ocrResult);
+    //         formData.append('file', selectedFile);
+
+    //         try {
+    //             const response = await fetch('/submit_form', {
+    //                 method: 'POST',
+    //                 body: formData
+    //             });
+    //             const data = await response.json();
+    //             console.log('Response from server:', data);
+    //         } catch (error) {
+    //             console.error('Error:', error);
+    //         }
+    //     };
+
     return (
         <div>
-            <form action="#" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+            <form action="post" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
                 <div>
                     <label htmlFor="uploadInput" className="sr-only">Upload Image</label>
                     <input
