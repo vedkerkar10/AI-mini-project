@@ -23,7 +23,7 @@ def query(payload):
 # print(output)
 
 
-def OCRStuff(file=r'C:/Users/vedke/Desktop/AI-project/backend/img.jpg' ,q="what can you infer from the following data about a food item and give me asummary of its effect on health by giving relevant comparision for better understanding, keep it short"):
+def OCRStuff(file=r'C:/Users/vedke/Desktop/AI-project/backend/img.jpg' ,q="how healthy is the product?"):
     tess.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
  
     img = Image.open(file)
@@ -32,7 +32,7 @@ def OCRStuff(file=r'C:/Users/vedke/Desktop/AI-project/backend/img.jpg' ,q="what 
     output = query(
     {
         "inputs": q
-        + text,
+        # + text,
     }
     )
 
